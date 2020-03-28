@@ -42,10 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Entities\SampleEntity.cs" />
-    <Compile Include="src\Repositories\ISampleRepository.cs" />
+    <Compile Include="src\Entities\VariableEntity.cs" />
     <Compile Include="src\Shared.cs" />
-    <Compile Include="src\ValueObjects\SampleValue.cs" />
+    <Compile Include="src\ValueObjects\SettingItems\Attribute.cs" />
+    <Compile Include="src\ValueObjects\SettingItems\Comment.cs" />
+    <Compile Include="src\ValueObjects\SettingItems\InitValue.cs" />
+    <Compile Include="src\ValueObjects\SettingItems\ItemName.cs" />
+    <Compile Include="src\ValueObjects\SettingItems\SettingItem.cs" />
     <Compile Include="src\ValueObjects\ValueObject.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +65,7 @@
     <Folder Include="src\Exceptions\" />
     <Folder Include="src\Helpers\" />
     <Folder Include="src\Logics\" />
+    <Folder Include="src\Repositories\" />
     <Folder Include="src\StaticValues\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
