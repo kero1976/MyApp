@@ -9,8 +9,32 @@ namespace MyApp.Domain.src.ValueObjects.SettingItems
 {
     public sealed　class InitValue : SettingItem
     {
-        public InitValue(string value) : base(value, "初期値")
+        private InitValue(string value) : base(value, "初期値")
         {
+
+        }
+
+        public InitValue(string value, Attribute attr) : base(value, "初期値")
+        {
+            AttributeValue = attr;
+        }
+
+        Attribute AttributeValue { get;}
+        public override string DisplayValue()
+        {
+
+            if (AttributeValue == Attribute.Number)
+            {
+                return Name + "=" + Value + Environment.NewLine;
+            }
+            else if(AttributeValue == Attribute.String)
+            {
+                return Name + "=\"" + Value + "\"" +  Environment.NewLine;
+            }
+            else
+            {
+                return Name + "=" + Value + Environment.NewLine;
+            }
 
         }
     }

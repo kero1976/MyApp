@@ -13,5 +13,14 @@ namespace MyApp.Domain.src.ValueObjects.SettingItems
         {
 
         }
+
+        public override string DisplayValue()
+        {
+            if (String.IsNullOrEmpty(Value))
+            {
+                return string.Empty;
+            }
+            return Name + "=\"" + Value + "\"" + Environment.NewLine;
+        }
     }
 }

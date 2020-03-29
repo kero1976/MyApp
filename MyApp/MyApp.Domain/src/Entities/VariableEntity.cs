@@ -34,10 +34,10 @@ namespace MyApp.Domain.src.Entities
         public string OutputValue()
         {
             string result =
-                ItemName.DisplayValue + Environment.NewLine +
-                Attribute.DisplayValue + Environment.NewLine +
-                InitValue.DisplayValue + Environment.NewLine +
-                Comment.DisplayValue + Environment.NewLine;
+                ItemName.DisplayValue() +
+                Attribute.DisplayValue() +
+                InitValue.DisplayValue() +
+                Comment.DisplayValue();
             return result;
         }
     }

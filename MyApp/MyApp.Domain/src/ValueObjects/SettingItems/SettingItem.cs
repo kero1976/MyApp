@@ -14,7 +14,7 @@ namespace MyApp.Domain.src.ValueObjects.SettingItems
             Name = name;
         }
         public string Value { get; }
-        public string DisplayValue => Name + "=" + Value;
+        public abstract string DisplayValue();
 
         protected string Name { get; }
 
