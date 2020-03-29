@@ -16,14 +16,14 @@ namespace UnitTestProject1
                 new ItemName("ABC"),
                 new Attribute("数値"),
                 new InitValue("1", new Attribute("数値")),
-                new Comment("\"Aループ\" ループカウンタ(入力側)")
+                new Comment("コメントです")
 
                 );
             entity.OutputValue().Is(
                 "項目名=\"ABC\"" + "\r\n" +
                 "属性=数値" + "\r\n" +
                 "初期値=1" + "\r\n" +
-                "コメント=\"\"Aループ\" ループカウンタ(入力側)\"" + "\r\n"
+                "コメント=\"コメントです\"" + "\r\n"
                 );
         }
 

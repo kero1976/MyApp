@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChainingAssertion.MSTest.cs" />
+    <Compile Include="AreaEntityTest.cs" />
     <Compile Include="VaiableTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
