@@ -51,7 +51,24 @@ namespace UnitTestProject1
             list.Add(entity3);
             list.Add(entity4);
             AreaEntity obj = new AreaEntity(list);
-            obj.OutputValue().Is("A");
+            obj.OutputValue().Is(
+"[変数開始]\r\n項目名=\"ABC\"" + "\r\n" +
+    "属性=数値" + "\r\n" +
+    "初期値=1" + "\r\n" +
+    "コメント=\"コメントです\"" + "\r\n" +
+    "項目名=\"ABC\"" + "\r\n" +
+    "属性=数値" + "\r\n" +
+    "初期値=1" + "\r\n" +
+    "項目名=\"ABC\"" + "\r\n" +
+    "属性=文字" + "\r\n" +
+    "初期値=\"1\"" + "\r\n" +
+    "項目名=\"ABC\"" + "\r\n" +
+    "属性=文字" + "\r\n" +
+    "初期値=0x1234" + "\r\n" +
+    "[変数終了]");
+
+
+
         }
     }
 }

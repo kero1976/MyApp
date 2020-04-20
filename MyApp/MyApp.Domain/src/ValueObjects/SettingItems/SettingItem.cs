@@ -22,5 +22,11 @@ namespace MyApp.Domain.src.ValueObjects.SettingItems
         {
             return this.Value == other.Value;
         }
+
+        public static string DoubleQuote(string value)
+        {
+            return "\"" + value.Replace("\"", "\"\"") + "\"";
+        }
+
     }
 }

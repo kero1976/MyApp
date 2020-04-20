@@ -20,7 +20,7 @@ namespace MyApp.Domain.src.ValueObjects.SettingItems
             {
                 return string.Empty;
             }
-            return Name + "=\"" + Value + "\"" + Environment.NewLine;
+            return Name + "=" + DoubleQuote(Value) + Environment.NewLine;
         }
     }
 }

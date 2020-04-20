@@ -13,14 +13,14 @@ namespace UnitTestProject1
         public void 全項目あり()
         {
             VariableEntity entity = new VariableEntity(
-                new ItemName("ABC"),
+                new ItemName("A\"BC"),
                 new Attribute("数値"),
                 new InitValue("1", new Attribute("数値")),
                 new Comment("コメントです")
 
                 );
             entity.OutputValue().Is(
-                "項目名=\"ABC\"" + "\r\n" +
+                "項目名=\"A\"\"BC\"" + "\r\n" +
                 "属性=数値" + "\r\n" +
                 "初期値=1" + "\r\n" +
                 "コメント=\"コメントです\"" + "\r\n"

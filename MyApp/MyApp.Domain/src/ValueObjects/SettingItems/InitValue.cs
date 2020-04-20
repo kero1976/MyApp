@@ -29,7 +29,7 @@ namespace MyApp.Domain.src.ValueObjects.SettingItems
             }
             else if(AttributeValue == Attribute.String)
             {
-                return Name + "=\"" + Value + "\"" +  Environment.NewLine;
+                return Name + "=" + DoubleQuote(Value) +  Environment.NewLine;
             }
             else
             {

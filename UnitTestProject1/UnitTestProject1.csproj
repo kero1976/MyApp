@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="ChainingAssertion.MSTest.cs" />
     <Compile Include="AreaEntityTest.cs" />
+    <Compile Include="UnitTest1.cs" />
+    <Compile Include="RandomReaderTest.cs" />
     <Compile Include="VaiableTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,6 +69,14 @@
       <Project>{2f5d5c03-7748-462b-bb58-d2aadb34b00f}</Project>
       <Name>MyApp.Infrastructure</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="テストデータ\入力データ\INPUT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="テストデータ\入力データ\設定ファイル.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,7 +16,7 @@ namespace MyApp.Domain.src.ValueObjects.SettinItems
 
         public override string DisplayValue()
         {
-            return Name + "=\"" + Value + "\"" +  Environment.NewLine;
+            return Name + "=" + DoubleQuote(Value) +  Environment.NewLine;
         }
 
     }

@@ -1,0 +1,14 @@
+﻿<LOOP>
+	<DATA>
+		<NAME>TEST1</NAME>
+		<SIZE>5</SIZE>
+	</DATA>
+	<DATA>
+		<NAME>TEST2</NAME>
+		<SIZE>3</SIZE>
+	</DATA>
+	<DATA>
+		<NAME>TEST3</NAME>
+		<SIZE>5</SIZE>
+	</DATA>
+</LOOP>

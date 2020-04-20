@@ -44,15 +44,18 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Fake\Class1.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DDDSample.Domain\DDDSample.Domain.csproj">
-      <Project>{97b2ddcf-cb5a-4e25-aa31-671f23f18f1f}</Project>
-      <Name>DDDSample.Domain</Name>
-    </ProjectReference>
+    <Compile Include="src\File\ConfigReader.cs" />
+    <Compile Include="src\File\InputFileReader.cs" />
+    <Compile Include="src\File\RandomFileReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ReadMe\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyApp.Domain\MyApp.Domain.csproj">
+      <Project>{d2a07058-df77-4ce8-9521-1de1e25aedce}</Project>
+      <Name>MyApp.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

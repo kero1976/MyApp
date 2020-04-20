@@ -43,7 +43,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Entities\AreaEntity.cs" />
+    <Compile Include="src\Entities\DataEntity.cs" />
+    <Compile Include="src\Entities\LoopEntity.cs" />
     <Compile Include="src\Entities\VariableEntity.cs" />
+    <Compile Include="src\Exceptions\DataEndException.cs" />
+    <Compile Include="src\Exceptions\MyAppException.cs" />
+    <Compile Include="src\Repositories\ILoopRepository.cs" />
     <Compile Include="src\Shared.cs" />
     <Compile Include="src\ValueObjects\SettingItems\Attribute.cs" />
     <Compile Include="src\ValueObjects\SettingItems\Comment.cs" />
@@ -63,10 +68,8 @@
     <Folder Include="ReadMe\Helpers\" />
     <Folder Include="ReadMe\Logics\" />
     <Folder Include="ReadMe\StaticValues\" />
-    <Folder Include="src\Exceptions\" />
     <Folder Include="src\Helpers\" />
     <Folder Include="src\Logics\" />
-    <Folder Include="src\Repositories\" />
     <Folder Include="src\StaticValues\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,7 +16,7 @@ namespace MyApp.Domain.src.Entities
 
         public string OutputValue()
         {
-            string result = "[変数開始]";
+            string result = "[変数開始]" + Environment.NewLine; ;
             foreach(var item in VariableEntities){
                 result += item.OutputValue();
             }
