@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using MyApp.Infrastructure.src.File;
+using MyApp.Domain.src.Repositories;
 
 namespace UnitTestProject1
 {
@@ -21,13 +22,15 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void 設定ファイルと入力ファイル読み込み()
+        public void 設定ファイルと入力ファイル読み込み出力する()
         {
             var conf = new ConfigReader("C:\\Users\\kero\\source\\repos\\MyApp\\UnitTestProject1\\テストデータ\\入力データ\\設定ファイル.txt");
 
-            var input = new InputFileReader("C:\\Users\\kero\\source\\repos\\MyApp\\UnitTestProject1\\テストデータ\\入力データ\\INPUT.txt",
+            IReaderRepository input = new InputFileReader("C:\\Users\\kero\\source\\repos\\MyApp\\UnitTestProject1\\テストデータ\\入力データ\\INPUT.txt",
                 conf.GetLoopEntity());
 
+            IWriterRepository writer = new OutputXMLFile("d:\\test\\sample.xml");
+            writer.Open().IsTrue();
             input.Open();
             var line = input.GetLine();
 
@@ -36,17 +39,18 @@ namespace UnitTestProject1
                 Console.WriteLine(data.Value);
             }
             line.IsNotNull();
+
+            writer.SetLine(line);
+            line = input.GetLine();
+
+            foreach (var data in line.DataLists)
+            {
+                Console.WriteLine(data.Value);
+            }
+            writer.SetLine(line);
+            writer.Close();
         }
 
-        [TestMethod]
-        public void intのサイズ()
-        {
-
-            long max = long.MaxValue;
-            max.Is (9223372036854775807);
-            long G = max / 1024 / 1024 /1024;
-            G.Is(2);
-        }
 
     }
 }

@@ -39,5 +39,10 @@ namespace MyApp.Domain.src.Entities
             }
             return result.ToString();
         }
+
+        public LoopEntity()
+        {
+
+        }
     }
 }

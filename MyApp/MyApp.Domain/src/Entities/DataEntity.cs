@@ -29,6 +29,9 @@ namespace MyApp.Domain.src.Entities
         {
             Value = string.Empty;
         }
+        public DataEntity()
+        {
 
+        }
     }
 }

@@ -49,6 +49,8 @@
     <Compile Include="src\Exceptions\DataEndException.cs" />
     <Compile Include="src\Exceptions\MyAppException.cs" />
     <Compile Include="src\Repositories\ILoopRepository.cs" />
+    <Compile Include="src\Repositories\IWriterRepository.cs" />
+    <Compile Include="src\Repositories\IReaderRepository.cs" />
     <Compile Include="src\Shared.cs" />
     <Compile Include="src\ValueObjects\SettingItems\Attribute.cs" />
     <Compile Include="src\ValueObjects\SettingItems\Comment.cs" />

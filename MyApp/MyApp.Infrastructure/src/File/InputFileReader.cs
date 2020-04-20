@@ -1,5 +1,6 @@
 ﻿using MyApp.Domain.src.Entities;
 using MyApp.Domain.src.Exceptions;
+using MyApp.Domain.src.Repositories;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MyApp.Infrastructure.src.File
 {
-    public class InputFileReader
+    public class InputFileReader : IReaderRepository
     {
         /// <summary>
         /// 入力ファイル
@@ -23,8 +24,6 @@ namespace MyApp.Infrastructure.src.File
 
         private RandomFileReader reader;
 
-        private int position = 0;
-
         /// <summary>
         /// コンストラクタ
         /// </summary>
@@ -36,14 +35,15 @@ namespace MyApp.Infrastructure.src.File
             Config = config;
         }
 
-        public void Open()
+        public bool Open()
         {
             reader = new RandomFileReader(InputFileName);
+            return reader.Open();
         }
 
         public void Close()
         {
-            //reader.Close();
+            reader.Close();
         }
 
         /// <summary>
@@ -52,15 +52,19 @@ namespace MyApp.Infrastructure.src.File
         /// <returns></returns>
         public LoopEntity GetLine()
         {
+            reader.Save();
 
-
-            foreach(var data in Config.DataLists)
+            foreach (var data in Config.DataLists)
             {
-
+                data.Value = reader.ReadString(data.Size);
 
             }
             return Config;
         }
 
+        public void Dispose()
+        {
+            Close();
+        }
     }
 }

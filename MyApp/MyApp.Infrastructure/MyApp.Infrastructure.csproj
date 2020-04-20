@@ -46,6 +46,7 @@
     <Compile Include="src\Fake\Class1.cs" />
     <Compile Include="src\File\ConfigReader.cs" />
     <Compile Include="src\File\InputFileReader.cs" />
+    <Compile Include="src\File\OutputXMLFile.cs" />
     <Compile Include="src\File\RandomFileReader.cs" />
   </ItemGroup>
   <ItemGroup>
